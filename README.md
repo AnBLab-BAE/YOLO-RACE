@@ -34,4 +34,19 @@ if __name__ == '__main__':
     model.train(data=data_path, epochs=100, project=project_path, name='yolov8n_CR_SKU10000')
 ```
 
-# 3. Model Validation 
+# 3. Model Validation Example
+* Notebook(.ipynb)
+
+```
+from ultralytics import YOLO
+
+# 모델 로드
+model = YOLO("E:/YOLOv8_train/yolov8n_CR_SKU/weights/best.pt")  # 사용자 정의 모델을 로드합니다
+
+# 모델 검증
+metrics = model.val()  # 인자가 필요 없음, 데이터셋과 설정이 기억됩니다
+metrics.box.map    # map50-95
+metrics.box.map50  # map50
+metrics.box.map75  # map75
+metrics.box.maps   # 각 카테고리의 map50-95가 포함된 목록
+```

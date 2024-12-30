@@ -22,20 +22,20 @@
 from ultralytics import YOLO
 from multiprocessing import freeze_support
 
-# 모델 경로 설정
+# Set the model path
 model_path = 'E:/Degree_project03/YOLO-RACE/ultralytics/cfg/models/v8/yolov8_CR.yaml'
-# 데이터 설정 파일 경로
+# Set the data configuration file path
 data_path = 'E:/Degree_project03/YOLO-RACE/ultralytics/cfg/datasets/SKU-110K.yaml'
-# 학습 결과 저장 경로
+# Set the path to save training results
 project_path = 'E:/YOLOv8_train/'
 
-# YOLOv10 모델 불러오기
+# Load the model
 model = YOLO(model_path)
 
 if __name__ == '__main__':
     freeze_support()
     
-    # 모델 학습
+     # Train the model
     model.train(data=data_path, epochs=100, project=project_path, name='yolov8n_CR_SKU10000')
 ```
 
@@ -45,13 +45,13 @@ if __name__ == '__main__':
 ```
 from ultralytics import YOLO
 
-# 모델 로드
-model = YOLO("E:/YOLOv8_train/yolov8n_CR_SKU/weights/best.pt")  # 사용자 정의 모델을 로드합니다
+# Load the model
+model = YOLO("E:/YOLOv8_train/yolov8n_CR_SKU/weights/best.pt")  # Load Custom Model
 
 # 모델 검증
-metrics = model.val()  # 인자가 필요 없음, 데이터셋과 설정이 기억됩니다
+metrics = model.val()  # No arguments needed, the dataset and settings are retained
 metrics.box.map    # map50-95
 metrics.box.map50  # map50
 metrics.box.map75  # map75
-metrics.box.maps   # 각 카테고리의 map50-95가 포함된 목록
+metrics.box.maps   # List of mAP50-95 values for each category
 ```

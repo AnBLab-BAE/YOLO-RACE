@@ -5,7 +5,10 @@
 ![학위논문 그림 1](https://github.com/user-attachments/assets/78b18b04-848d-4c47-8f5a-d73edc62e4ec)
 
 # 2. Model Train 
-![image](https://github.com/user-attachments/assets/ad4228ea-5484-413b-9869-c99e0eb62ed5)
+* Example Train & Val Steps (yolov8m):
+```
+  python start_train.py --model ./ultralytics/cfg/models/v8/yolov8m.yaml --data_dir ./GRAZPEDWRI-DX/data/meta.yaml
+```
 
 
 

@@ -5,9 +5,9 @@
 ![학위논문 그림 1](https://github.com/user-attachments/assets/78b18b04-848d-4c47-8f5a-d73edc62e4ec)
 
 # 2. Model Train 
-* Example Train & Val Steps (yolov8m):
+* Example Train(yolov8n):
 ```
-  python start_train.py --model ./ultralytics/cfg/models/v8/yolov8m.yaml --data_dir ./GRAZPEDWRI-DX/data/meta.yaml
+  python start_train.py --model ultralytics/cfg/models/v8/yolov8_CR.yaml --dataset_config ultralytics/cfg/datasets/SKU-110K.yaml  --epochs 100 --output_dir E:/YOLOv8_train/ --run_name YOLOv8n_SKU-110K
 ```
 
 

@@ -24,8 +24,10 @@ from multiprocessing import freeze_support
 
 # Set the model path
 model_path = 'E:/Degree_project03/YOLO-RACE/ultralytics/cfg/models/v8/yolov8_CR.yaml'
+
 # Set the data configuration file path
 data_path = 'E:/Degree_project03/YOLO-RACE/ultralytics/cfg/datasets/SKU-110K.yaml'
+
 # Set the path to save training results
 project_path = 'E:/YOLOv8_train/'
 

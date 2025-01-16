@@ -50,7 +50,7 @@ from ultralytics import YOLO
 # Load the model
 model = YOLO("E:/YOLOv8_train/yolov8n_CR_SKU/weights/best.pt")  # Load Custom Model
 
-# 모델 검증
+# Model Validation
 metrics = model.val()  # No arguments needed, the dataset and settings are retained
 metrics.box.map    # map50-95
 metrics.box.map50  # map50
